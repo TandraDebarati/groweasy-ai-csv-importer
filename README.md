@@ -282,4 +282,4 @@ This submission is built for the GrowEasy Software Developer assignment.
 
 ## Position Applied For
 
-Software Developer Intern
+Software Developer Full-Time
