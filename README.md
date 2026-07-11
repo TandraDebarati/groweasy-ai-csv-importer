@@ -262,17 +262,6 @@ The importer normalizes output into the following GrowEasy CRM fields:
 - The app is stateless and does not require a database.
 - The importer caps file size to 8 MB and previews up to 1,000 rows in the browser.
 
-## Assignment Context
-
-This submission is built for the GrowEasy Software Developer assignment.
-
-- Role: **Software Developer Intern / Full-Time**
-- Company: **GrowEasy**
-- Website: https://groweasy.ai
-- Work mode: **Remote / WFH**
-- Joining: **Immediate**
-- Delivery: GitHub repo + hosted application URL
-
 ### Key project fit
 
 - Intelligent CSV field mapping using AI
