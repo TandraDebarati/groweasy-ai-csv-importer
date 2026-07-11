@@ -1,0 +1,398 @@
+:root {
+  --bg: #f7f6f2;
+  --panel: #ffffff;
+  --panel-2: #f0f7f5;
+  --ink: #18211f;
+  --muted: #66736f;
+  --line: #dce5e1;
+  --accent: #167a5a;
+  --accent-2: #d8582a;
+  --danger: #b42318;
+  --shadow: 0 18px 48px rgba(17, 37, 31, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(22, 122, 90, 0.11), transparent 360px),
+    var(--bg);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.app.dark {
+  --bg: #111816;
+  --panel: #18231f;
+  --panel-2: #1d2d28;
+  --ink: #f3f7f5;
+  --muted: #a7b7b1;
+  --line: #2f423b;
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.shell {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 0.96;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.side,
+.mainPanel,
+.results {
+  background: color-mix(in srgb, var(--panel), transparent 1%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.side {
+  padding: 16px;
+  align-self: start;
+  position: sticky;
+  top: 18px;
+}
+
+.dropzone {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 11px;
+  border: 1px dashed color-mix(in srgb, var(--accent), var(--line));
+  border-radius: 8px;
+  background: var(--panel-2);
+  text-align: center;
+  padding: 18px;
+}
+
+.dropzone span,
+.panelTitle p,
+.metric span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.primaryButton,
+.secondaryButton,
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  min-height: 42px;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.primaryButton {
+  padding: 0 15px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+}
+
+.secondaryButton,
+.iconButton {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.secondaryButton {
+  padding: 0 14px;
+}
+
+.iconButton {
+  width: 42px;
+}
+
+button:disabled,
+.primaryButton:has(input:disabled) {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.metricGrid,
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.summary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 14px;
+}
+
+.metric {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  min-width: 0;
+}
+
+.metric strong {
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.statusBox,
+.notice,
+.tableNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.notice {
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.notice.warning {
+  border-color: color-mix(in srgb, var(--accent-2), transparent 60%);
+  background: color-mix(in srgb, var(--accent-2), transparent 90%);
+}
+
+.mainPanel,
+.results {
+  min-width: 0;
+  padding: 16px;
+}
+
+.results {
+  margin-top: 18px;
+}
+
+.resultHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.downloadActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.titleIcon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  background: var(--panel-2);
+  color: var(--accent);
+}
+
+.tableShell {
+  margin-bottom: 18px;
+}
+
+.tableWrap {
+  max-height: 560px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tableNote {
+  margin: 0 0 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  max-width: 280px;
+  overflow-wrap: anywhere;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel-2);
+  color: var(--ink);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+tr:hover td {
+  background: color-mix(in srgb, var(--panel-2), transparent 45%);
+}
+
+.emptyState,
+.error {
+  border-radius: 8px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: var(--panel-2);
+  text-align: center;
+}
+
+.error {
+  margin-bottom: 14px;
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger), transparent 92%);
+  border-color: color-mix(in srgb, var(--danger), transparent 65%);
+}
+
+.progress {
+  height: 7px;
+  overflow: hidden;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.progress span {
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent-2);
+  animation: progress 1s ease-in-out infinite alternate;
+}
+
+.spin {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes progress {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    transform: translateX(170%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .shell {
+    padding: 18px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .side {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .metricGrid,
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .resultHeader,
+  .downloadActions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

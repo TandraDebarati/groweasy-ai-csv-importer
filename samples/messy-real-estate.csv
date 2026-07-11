@@ -1,0 +1,4 @@
+Timestamp,Customer,Contact,Alt Contact,Mail IDs,Project,Location,Assigned To,Stage,Remarks,Requirement
+13 May 2026 2:35 PM,Priya Singh,9876543213,,priya.singh@example.com,Varah Swamy,Pune Maharashtra,test@gmail.com,closed won,"Deal closed, onboarding in progress",3BHK possession next quarter
+2026/05/14 09:15,Amit Mehra,,,"amit@example.com; amit.work@example.com",Sarjapur Plots,Sarjapur Bangalore,owner@example.com,new lead,"Wants callback Saturday",Plots near school
+2026/05/14 10:15,Invalid Person,,,,Eden Park,Unknown,test@gmail.com,new lead,No contact details,Should be skipped

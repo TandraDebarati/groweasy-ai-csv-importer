@@ -1,0 +1,4 @@
+When,Person,Mail,Mobile,Source-ish,Comments
+not a date,Blank Contact,,,Unknown,No contact details
+2026-06-04,Ravi Kumar,ravi@example.com,,Varah Swamy,"Line one\nLine two note"
+2026-06-04,Wrong Phone,,12345,Sarjapur Plots,Short phone should be ignored

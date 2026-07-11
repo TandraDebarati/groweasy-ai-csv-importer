@@ -1,0 +1,4 @@
+created_time,full_name,email,phone_number,city,platform,ad_name,campaign_name,lead_status,notes
+2026-05-13T14:20:48+05:30,John Doe,john.doe@example.com,+91 9876543210,Mumbai,Facebook,Meridian Tower Visit,Lead Gen May,follow up,Client is asking to reschedule demo
+2026-05-13T14:25:30+05:30,Sarah Johnson,sarah.johnson@example.com,"+91 9876543211, +91 9000011111",Bangalore,Facebook,Eden Park Offer,Retargeting,busy,Person was busy; will try again next week
+2026-05-13T14:30:15+05:30,Rajesh Patel,,+91-9876543212,Delhi,Facebook,Generic Campaign,Lead Gen May,not interested,Asked to remove from list
